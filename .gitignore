@@ -1,0 +1,15 @@
+db.sqlite3
+.vscode
+ecommerce_core/__pycache__
+api/__pycache__
+api/migrations/__pycache__
+api/category/__pycache__
+api/category/migrations/__pycache__
+api/product/__pycache__
+api/product/migrations/__pycache__
+api/payment/__pycache__
+api/payment/migrations/__pycache__
+api/order/__pycache__
+api/order/migrations/__pycache__
+api/users/__pycache__
+api/users/migrations/__pycache__
