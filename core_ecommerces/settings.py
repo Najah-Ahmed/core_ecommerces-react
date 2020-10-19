@@ -50,11 +50,12 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # third party middleware
-    'corsheaders.middleware.CorsMiddleware',
+
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # third party middleware
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -81,8 +82,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'core_ecommerces.wsgi.application'
-# django-cors-heareds configration
-CORS_ORIGIN_ALLOW_ALL = True
+
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -130,6 +130,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -143,6 +147,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+AUTH_USER_MODEL = 'users.CustomUser'
+# django-cors-heareds configration
+CORS_ORIGIN_ALLOW_ALL = True
