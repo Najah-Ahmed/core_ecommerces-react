@@ -3,18 +3,21 @@ from api.users.models import CustomUser
 
 
 class Migration(migrations.Migration):
-
     def seed_data(apps, schema_editor):
-        user = CustomUser(name="",
-                          email="",
+        user = CustomUser(name="njh_admin",
+                          email="najah_admin@app.com",
                           is_staff=True,
                           is_superuser=True,
-                          gender="female",
-                          phone="5666666")
-        user.set_password("")
+                          phone="777778",
+                          gender="female"
+                          )
+        user.set_password("njh123")
         user.save()
 
-    dependencies = []
+    dependencies = [
+
+    ]
+
     operations = [
-        migrations.RunPython(seed_data,)
+        migrations.RunPython(seed_data),
     ]
