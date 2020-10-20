@@ -5,13 +5,13 @@ from api.users.models import CustomUser
 class Migration(migrations.Migration):
 
     def seed_data(apps, schema_editor):
-        user = CustomUser(name="najah_admin",
-                          email="najah_admin@app.co",
+        user = CustomUser(name="",
+                          email="",
                           is_staff=True,
                           is_superuser=True,
                           gender="female",
                           phone="5666666")
-        user.set_password("njh123")
+        user.set_password("")
         user.save()
 
     dependencies = []
