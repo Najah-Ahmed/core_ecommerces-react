@@ -1,6 +1,6 @@
 db.sqlite3
 .vscode
-ecommerce_core/__pycache__
+core_ecommerces/__pycache__
 api/__pycache__
 api/migrations/__pycache__
 api/category/__pycache__
